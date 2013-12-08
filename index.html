@@ -1,3 +1,9 @@
+<!--
+ Sahil Diwan
+ CIS 410 - Fall 2013
+ Scientific Visualization
+ Final Project: Visualizing Meteorites
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +16,29 @@
     <link rel="shortcut icon" href="#">
 
     <title>CIS 410 Scientific Visualization, Final Project - Sahil Diwan</title>
+    <style>
+        .axis text {
+            font: 10px;
+        }
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+        .bar {
+            fill: steelblue;
+            fill-opacity: .7;
+        }
+        .x.axis path {
+            display: none;
+        }
+        label {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+        }
+    </style>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -38,9 +67,9 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a>
+                    <li class="active"><a href="index.html">Home</a>
                     </li>
-                    <li><a href="#about">About</a>
+                    <li><a href="about.html">About</a>
                     </li>
                 </ul>
             </div>
@@ -60,18 +89,67 @@
                 </p>
                 <div class="jumbotron">
                     <h2>Visualizing Meteorites</h2>
-                    <p>The comprehensive data set to be used is from The Meteoritical Society and contains information on all of the known meteorite landings. An interactive map for data visualizations, along with a sortable bar chart will be used to show all known meteorite landings with recorded locations.</p>
+                    <p>The comprehensive data set to be used is from The Meteoritical Society and contains information on all of the known meteorite landings. An interactive map for data visualizations, along with a sortable bar chart will be used to show
+                        all known meteorite landings with recorded locations.</p>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-9">
                         <h2>Proposal</h2>
-                        <p>I will be creating two visualizations using the data set I have found. The first will be a world map view which will show all known meteorite landings, with markers scaled by meteorite mass. The second will be a sortable bar chart displaying the number of meteorites that have fallen per half-century or so.</p>
+                        <p>I will be creating two visualizations using the data set I have found. The first will be a world map view which will show all known meteorite landings, with markers scaled by meteorite mass. The second will be a sortable bar chart
+                            displaying the number of meteorites that have fallen per half-century or so.</p>
                         <p>Large problems to tackle:
-                        <li>Convert data set to CSV or JSON</li>
-                        <li>Figure out how to visualize data set in interactive map view</li>
-                        <li>Figure out how to visualize data set in interactive sortable bar chart</li>
+                            <li>Convert data set to CSV or JSON</li>
+                            <li>Figure out how to visualize data set in interactive map view</li>
+                            <li>Figure out how to visualize data set in interactive sortable bar chart</li>
                         </p>
-                        <p><a class="btn btn-default" href="meteorites-updated_05-14-13.xlsx" role="button">View data set &raquo;</a>
+                        <p><a class="btn btn-default" href="meteorites-updated_05-14-13.xlsx" role="button">Download data set &raquo;</a>
+                        </p>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-9">
+                        <h2>Interactive Map View</h2>
+                        <p>
+
+                            <!-- INTERACTIVE MAP VIEW -->
+
+                            <div id="container1" style="height: 750px; width: 1250px"></div>
+                            <!-- Datamaps Source -->
+                            <script src="js/sources/d3.v3.js"></script>
+                            <script src="js/sources/datamaps-all.js"></script>
+
+                            <script src="js/map.js"></script>
+
+                            <!-- END INTERACTIVE MAP VIEW -->
+
+                        </p>
+                        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a>
+                        </p>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-9">
+                        <h2>Sortable Bar Chart</h2>
+                        <p>
+
+                            <!-- SORTABLE BAR CHART -->
+
+                            <div id="container2" style="height: 500px; width: 960px"></div>
+
+                            <label>
+                                <input type="checkbox">Sort Data
+                            </label>
+                            <script src="js/chart.js"></script>
+
+                            <!-- END SORTABLE BAR CHART -->
+
+                        </p>
+                        <p>
+                            <a class="btn btn-default" href="#" role="button">View details &raquo;</a>
                         </p>
                     </div>
                     <!--/span-->
@@ -82,6 +160,7 @@
 
             <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
                 <div class="list-group">
+                    <h5>Technologies/Resources</h5>
                     <a href="http://d3js.org/" class="list-group-item">D3.js</a>
                     <a href="http://datamaps.github.io/" class="list-group-item">DataMaps</a>
                     <a href="http://www.meteoriticalsociety.org/" class="list-group-item">The Meteoritical Society</a>
@@ -100,14 +179,12 @@
     </div>
     <!--/.container-->
 
-
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Placed at the end of the document pages load faster -->
     <script src="js/jquery/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/offcanvas.js"></script>
+    <script src="js/sources/bootstrap.min.js"></script>
+    <script src="js/sources/offcanvas.js"></script>
 </body>
 
 </html>
