@@ -62,7 +62,7 @@ d3.tsv("data/chart_data.tsv", function (error, data) {
         .attr("y", 6)
         .attr("dy", ".71em")
         .style("text-anchor", "end")
-        .text("Number");
+        .text("Findings");
 
     svg.selectAll(".bar")
         .data(data)
@@ -83,7 +83,7 @@ d3.tsv("data/chart_data.tsv", function (error, data) {
 
     var sortTimeout = setTimeout(function () {
         d3.select("input").property("checked", false).each(change);
-    }, 2000);
+    }, 4000);
 
     function change() {
         clearTimeout(sortTimeout);

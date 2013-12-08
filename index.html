@@ -18,7 +18,7 @@
     <title>CIS 410 Scientific Visualization, Final Project - Sahil Diwan</title>
     <style>
         .axis text {
-            font: 10px;
+            font-size: 10px;
         }
         .axis path,
         .axis line {
@@ -27,8 +27,8 @@
             shape-rendering: crispEdges;
         }
         .bar {
-            fill: steelblue;
-            fill-opacity: .7;
+            fill: #ABDDA4;
+            fill-opacity: .8;
         }
         .x.axis path {
             display: none;
@@ -36,7 +36,7 @@
         label {
             position: absolute;
             top: 10px;
-            right: 15px;
+            right: 10px;
         }
     </style>
 
@@ -89,18 +89,18 @@
                 </p>
                 <div class="jumbotron">
                     <h2>Visualizing Meteorites</h2>
-                    <p>The comprehensive data set to be used is from The Meteoritical Society and contains information on all of the known meteorite landings. An interactive map for data visualizations, along with a sortable bar chart will be used to show
-                        all known meteorite landings with recorded locations.</p>
+                    <p>The comprehensive data set used is from The Meteoritical Society and contains information on all known meteorite landings. An interactive map for data visualization, along with a sortable bar chart are used below to show all known
+                        meteorite landings with recorded locations.</p>
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-9">
                         <h2>Proposal</h2>
-                        <p>I will be creating two visualizations using the data set I have found. The first will be a world map view which will show all known meteorite landings, with markers scaled by meteorite mass. The second will be a sortable bar chart
-                            displaying the number of meteorites that have fallen per half-century or so.</p>
-                        <p>Large problems to tackle:
-                            <li>Convert data set to CSV or JSON</li>
-                            <li>Figure out how to visualize data set in interactive map view</li>
-                            <li>Figure out how to visualize data set in interactive sortable bar chart</li>
+                        <p>I have created two visualizations using the described data set found. The first is an interactive world map view which shows all known meteorite landings, with markers scaled by meteorite mass. The second is a sortable bar chart
+                            displaying the number of meteorites that have been found per decade.</p>
+                        <p>Large problems tackled:
+                            <li>Converted data set to JSON, correctly</li>
+                            <li>Figured out how to visualize data set in interactive map view</li>
+                            <li>Figured out how to visualize data set in sortable bar chart</li>
                         </p>
                         <p><a class="btn btn-default" href="meteorites-updated_05-14-13.xlsx" role="button">Download data set &raquo;</a>
                         </p>
@@ -116,6 +116,7 @@
                             <!-- INTERACTIVE MAP VIEW -->
 
                             <div id="container1" style="height: 750px; width: 1250px"></div>
+
                             <!-- Datamaps Source -->
                             <script src="js/sources/d3.v3.js"></script>
                             <script src="js/sources/datamaps-all.js"></script>
@@ -125,7 +126,7 @@
                             <!-- END INTERACTIVE MAP VIEW -->
 
                         </p>
-                        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a>
+                        <p><a class="btn btn-default" href="about.html" role="button">View details &raquo;</a>
                         </p>
                     </div>
                     <!--/span-->
@@ -149,7 +150,7 @@
 
                         </p>
                         <p>
-                            <a class="btn btn-default" href="#" role="button">View details &raquo;</a>
+                            <a class="btn btn-default" href="about.html" role="button">View details &raquo;</a>
                         </p>
                     </div>
                     <!--/span-->
@@ -164,6 +165,7 @@
                     <a href="http://d3js.org/" class="list-group-item">D3.js</a>
                     <a href="http://datamaps.github.io/" class="list-group-item">DataMaps</a>
                     <a href="http://www.meteoriticalsociety.org/" class="list-group-item">The Meteoritical Society</a>
+                    <a href="https://github.com/sahildiwan/Visualizing-Meteorites" class="list-group-item">Source code</a>
                 </div>
             </div>
             <!--/span-->
