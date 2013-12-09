@@ -16,39 +16,12 @@
     <link rel="shortcut icon" href="#">
 
     <title>CIS 410 Scientific Visualization, Final Project - Sahil Diwan</title>
-    <style>
-        .axis text {
-            font-size: 10px;
-        }
-        .axis path,
-        .axis line {
-            fill: none;
-            stroke: #000;
-            shape-rendering: crispEdges;
-        }
-        .bar {
-            fill: #ABDDA4;
-            fill-opacity: .8;
-        }
-        .x.axis path {
-            display: none;
-        }
-        label {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-    </style>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/offcanvas.css" rel="stylesheet">
-
-    <!-- D3 and Datamaps Source -->
-    <script src="js/sources/d3.v3.js"></script>
-    <script src="js/sources/datamaps-all.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -71,9 +44,9 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a>
+                    <li><a href="index.html">Home</a>
                     </li>
-                    <li><a href="about.html">About</a>
+                    <li class="active"><a href="about.html">About</a>
                     </li>
                 </ul>
             </div>
@@ -91,26 +64,17 @@
                 <p class="pull-right visible-xs">
                     <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
                 </p>
-                <div class="jumbotron">
-                    <h2>Visualizing Meteorites</h2>
-                    <p>The comprehensive data set used is from The Meteoritical Society and contains information on all known meteorite landings. An interactive map for data visualization, along with a sortable bar chart are used below to show all known
-                        meteorite landings with recorded locations.</p>
-                </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-9">
-                        <h2>Interactive Map View</h2>
-                        <p>
-
-                            <!-- INTERACTIVE MAP VIEW -->
-
-                            <div id="container1" style="height: 750px; width: 1250px"></div>
-
-                            <script src="js/map.js"></script>
-
-                            <!-- END INTERACTIVE MAP VIEW -->
-
+                        <h2>Proposal</h2>
+                        <p>I have created two visualizations using the described data set found. The first is an interactive world map view which shows all known meteorite landings, with markers scaled by meteorite mass. The second is a sortable bar chart
+                            displaying the number of meteorites that have been found per decade.</p>
+                        <p>Large problems tackled:
+                            <li>Converted data set to JSON, correctly</li>
+                            <li>Figured out how to visualize data set in interactive map view</li>
+                            <li>Figured out how to visualize data set in sortable bar chart</li>
                         </p>
-                        <p><a class="btn btn-default" href="about.html" role="button">View details &raquo;</a>
+                        <p><a class="btn btn-default" href="index.html" role="button">View visualizations &raquo;</a>
                         </p>
                     </div>
                     <!--/span-->
@@ -118,23 +82,42 @@
                 <!--/row-->
                 <div class="row">
                     <div class="col-xs-12 col-sm-9">
-                        <h2>Sortable Bar Chart</h2>
-                        <p>
+                        <h2>The Data</h2>
+                        <p>The Meteoritical Society records all known meteorites in its Meteoritical Bulletin and publishes Meteoritics and Planetary Science, a leading journal of planetary science.</p>
+                        <p>The comprehensive data set used is from The Meteoritical Society and contains information on all of the known meteorite landings around the world. The Fusion Table was collected by Javier de la Torre and provided in an XLS file that
+                            consisted of 34,513 meteorites with the following fields:
 
-                            <!-- SORTABLE BAR CHART -->
-
-                            <div id="container2" style="height: 500px; width: 960px"></div>
-
-                            <label>
-                                <input type="checkbox">Sort Data
-                            </label>
-                            <script src="js/chart.js"></script>
-
-                            <!-- END SORTABLE BAR CHART -->
+                            <li>Name</li>
+                            <li>NameType</li>
+                            <li>RecClass</li>
+                            <li>Mass</li>
+                            <li>Year</li>
+                            <li>ID</li>
+                            <li>RecLat</li>
+                            <li>RecLong</li>
 
                         </p>
-                        <p>
-                            <a class="btn btn-default" href="about.html" role="button">View details &raquo;</a>
+                        <p><a class="btn btn-default" href="data/meteorites-updated_05-14-13.xlsx" role="button">Download data set &raquo;</a>
+                        </p>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-9">
+                        <h2>The Technologies</h2>
+                        <p>Three major web technologies/frameworks were used to complete this project.
+
+                            <li><b>D3.js</b> is a JavaScript library for manipulating documents based on data. D3 visualizes data using HTML, SVG (Scalable Vector Graphics), and CSS. D3’s emphasis on web standards allows for full capabilities of modern browsers,
+                                combining powerful visualization components and a data-driven approach to DOM manipulation. Created and maintained by some smart people in the Stanford Visualization Group.</li>
+
+                            <li><b>DataMaps</b> is a framework used to create interactive maps for data visualizations. DataMaps is intended to provide data visualizations based on geographical data. It is SVG-based, can scale to any screen size, and includes
+                                everything inside of a single script file. It heavily relies on the D3.js library. Created and maintained by Mark DiMarco.</li>
+
+                            <li>The site itself was created by using <b>Bootstrap</b>. Bootstrap is a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development. Created and maintained by some smart people at Twitter.</li>
+
+                        </p>
+                        <p><a class="btn btn-default" href="#" role="button">Learn more &raquo;</a>
                         </p>
                     </div>
                     <!--/span-->
